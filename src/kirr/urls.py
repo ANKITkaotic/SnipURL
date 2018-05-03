@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from shortener.views import kirr_FBV, Kirr_CBV
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^view-1/', kirr_FBV),
+    url(r'^view-2/', Kirr_CBV.as_view()),
 ]
