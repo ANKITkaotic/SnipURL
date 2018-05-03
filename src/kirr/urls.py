@@ -19,6 +19,6 @@ from shortener.views import kirr_FBV, Kirr_CBV
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^view-1/', kirr_FBV),
-    url(r'^view-2/', Kirr_CBV.as_view()),
+    url(r'^a/(?P<shortcode>[\w-]+)/', kirr_FBV),
+    url(r'^b/(?P<shortcode>[\w-]+)/', Kirr_CBV.as_view()),
 ]
